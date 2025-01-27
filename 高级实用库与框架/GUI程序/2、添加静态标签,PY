@@ -1,0 +1,22 @@
+#获得应用程序生命周期时间处理，增加窗口可扩展性
+
+import wx
+
+#自定义窗口类MyFrame
+class MyFrame(wx.Frame):
+    def __init__(self):
+        super().__init__(parent=None, title='第一个wxpython程序', size=(400, 300))
+        self.Center() #设置窗口居中
+        panel = wx.Panel(parent = self)#设置面板所在容器为当前窗口
+        #创建静态文本对象
+        statictext = wx.StaticText(parent = panel, label = 'Hello wxpython', pos = (10, 10))
+
+class App(wx.App):
+    def OnInit(self):#覆盖父类方法
+        #创建窗口对象
+        frame = MyFrame()
+        frame.Show()
+        return True
+if __name__ == '__main__':#判断主模块，当有多个模块时，主模块是程序运行的入口，类似于main函数
+    app = App()
+    app.MainLoop()

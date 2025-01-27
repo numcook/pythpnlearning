@@ -1,0 +1,14 @@
+cmd可能会用到的操作
+
+ipconfig 查看本机ip地址    
+任意命令 |findstr 寻找信息特定字符
+
+ipconfig/release “ ”   释放ip
+
+ipconfig/renew 重新获取ip
+
+切换磁盘：（以d为例）
+cd\ 回车 d: 回车
+
+
+
